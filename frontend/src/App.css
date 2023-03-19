@@ -1,3 +1,7 @@
-body{
-  background-color: #292929f0;
+@import url("https://fonts.googleapis.com/css2?family=Irish+Grover&family=Poppins:wght@400;700&display=swap");
+
+body {
+  /* background-color: #292929f0; */
+  background-color: #000;
+  font-family: "Poppins";
 }
