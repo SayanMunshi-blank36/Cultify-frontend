@@ -1,68 +1,72 @@
-.cultSelection{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    padding: 3rem;
-    border: 1px solid #747474;
-    border-radius: 3px;
-    background-color: #000;
-    color: #fff;
-
+.cultSelection {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 3rem;
+  /* border: 1px solid #747474; */
+  border-radius: 3px;
+  background-color: #000;
+  color: #fff;
 }
 .heading {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    padding: 1rem;
-
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  padding: 1rem;
 }
 
 .detail {
-    font-size: 1.2rem;
-    font-weight: 600;
-    line-height: 20px;
-    margin: 0px 40px 20px 40px;
+  font-size: 1.2rem;
+  font-weight: 600;
+  line-height: 20px;
+  margin: 0px 40px 20px 40px;
 }
 
 .cults {
-    padding: 1rem;
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
-    row-gap: 1rem;
-    column-gap: 3rem;
-
+  padding: 1rem;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  gap: 1rem;
+  /* column-gap: 3rem; */
 }
-@keyframes zoom-in{
-    0% {
-      transform: scale(1);
-    }
-    100% {
-      transform: scale(1.2);
-    }
-  }
-.cult{
-    text-align: center;
-    padding: 0.4rem 0.6rem;
-    border: 1px solid rgb(97, 96, 96);
-    border-radius: 5px;
-    background-color: #2e2e2e;
+@keyframes zoom-in {
+  0% {
     transform: scale(1);
-}
-
-
-.cult:hover{
-    cursor: pointer;
-    animation: zoom-in 0.3s ease-in-out ;
+  }
+  100% {
     transform: scale(1.2);
+  }
+}
+.cult {
+  text-align: center;
+  padding: 0.3rem 0.6rem;
+  /* border: 1px solid rgb(97, 96, 96); */
+  border-radius: 5px;
+  background-color: #2e2e2e;
+  transform: scale(1);
 }
 
-.cultSelection-btn{
-    margin-top: 1.3rem;
-    padding: 0.5rem 1rem;
-    border: 3px solid rgb(147, 146, 146);
-    border-radius: 15px;
+.cult:hover {
+  cursor: pointer;
+  animation: zoom-in 0.3s ease-in-out;
+  transform: scale(1.2);
 }
-.cultSelection-btn:hover{
-    cursor: pointer;
+
+.cultSelection-btn {
+  margin-top: 1.3rem;
+  padding: 0.5rem 1rem;
+  background-color: #1773ea;
+  border: none;
+  color: white;
+  font-size: 1.03rem;
+  font-weight: bold;
+  padding: 8px 10px;
+  width: 10rem;
+  cursor: pointer;
+  margin-top: 0.9rem;
+  border-radius: 3px;
+}
+.cultSelection-btn:hover {
+  cursor: pointer;
 }
