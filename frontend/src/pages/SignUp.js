@@ -18,7 +18,7 @@ function SignUp() {
                 <div className="form">
                     <div className='heading'>
                         <img className='cultifyLogo' src={logo} alt="logo" />
-                        <h1>Cultify</h1>
+                        <h1>Cultify </h1>
                     </div>
                     <p className='signUpPara'>
                         Sign up to becoem a part of your favorite Cult.
