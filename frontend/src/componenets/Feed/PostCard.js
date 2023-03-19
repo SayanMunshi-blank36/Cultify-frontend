@@ -6,6 +6,9 @@ import {Typography} from 'antd';
 const { Title, Link } = Typography;
 
 function PostCard() {
+
+  const [isLiked, setIsLiked]  = useState(false); 
+  
   return (
     <div className={styles.postCard}>
         <div className={styles.top}>
