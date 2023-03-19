@@ -5,7 +5,7 @@ function Feed() {
   return (
     <div className={styles.container}>
         <h2 className='styles.sectionHeader'>Latest Feed</h2>
-        <div className={styles.feedContainer} data-simplebar>
+        <div className={styles.feedContainer}>
             <PostCard/>
         </div>
     </div>

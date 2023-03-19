@@ -11,14 +11,15 @@ function RightSeaction() {
             <div className={styles.avatar}>
                 <FiUser/>
             </div>
-            <select className={styles.select} name="cars" id="cars">
+            <select className={styles.select} id="cars">
                 <option className = {styles.option}value="volvo">Volvo</option>
                 <option className = {styles.option}value="volvo">Volvo</option>
                 <option className = {styles.option}value="volvo">Volvo</option>
                 <option className = {styles.option}value="volvo">Volvo</option>
                 <option className = {styles.option}value="volvo">Volvo</option>
-                
             </select>
+            
+            
             </div>
             
         </div>
