@@ -13,17 +13,16 @@ function SignUp() {
   const [password, setPassword] = useState("");
   const [confirmPassword, setConfirmPassword] = useState("");
 
-  function postData() {
-    axios.post('https://cultify-backend-production.up.railway.app/api/user', {
-
-      email: email,
-      name: userName,
-      password: password,
-      joinedCults: ["64174ec4e9e4bf8fff3ce037", "641754e3e9e4bf8fff3ce06a"]
-
-    })
-  }
-
+const loginHandler = ()=>{
+  axios.post('https://cultify-backend-production.up.railway.app/api/user',
+    {
+      "email" : email,
+      "password":password,
+      "name": userName,
+      "joinedCults":["6416ca1f4fcdeb1b10ffff10","6416ca7b9d5a2cd5ee453cd5","6416ca7b9d5a2cd5ee453cd5"],
+    
+  })
+}
 
   return (
     <div className="signUp">
@@ -98,10 +97,7 @@ function SignUp() {
             By signing up, you agree to our Terms, privacy policy and cookies
             policy.
           </p>
-          <button type="submit" id="submit-btn" onClick={postData}>
-            Sign Up
-          </button>
-          {/* <button type="submit" id="submit-btn" value="Sign Up" onClick={postData()} /> */}
+          <button type="submit" id="submit-btn"  onClick={loginHandler} > Sign Up</button>
         </div>
 
         <div className="form2">

@@ -1,9 +1,16 @@
 import React from 'react';
+import Feed from '../componenets/Feed/Feed';
+import Navbar from '../componenets/Navbar/Navbar';
+import RightSeaction from '../componenets/RightSection/RightSeaction';
 
 function Home() {
   return (
     <div className='homePage'>
-        <h1>HomePage</h1>
+        <Navbar/>
+        <div style = {{width : "100%", display : "flex", justifyContent : "space-between",}}>
+        <Feed/>
+        <RightSeaction/>
+        </div>
     </div>
   );
 }

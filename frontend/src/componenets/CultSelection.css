@@ -9,6 +9,12 @@
     background-color: #000;
     color: #fff;
 }
+
+.ant-checkbox-wrapper{
+  color : white !important;
+
+}
+
 .heading {
   display: flex;
   flex-direction: row;
@@ -24,10 +30,9 @@
 }
 
 .cults {
-  padding: 1rem;
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr;
+  
   gap: 1rem;
+  width : 300px;
   /* column-gap: 3rem; */
 }
 @keyframes zoom-in {
