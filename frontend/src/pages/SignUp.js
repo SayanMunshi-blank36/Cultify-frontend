@@ -12,6 +12,7 @@ function SignUp() {
   const [password, setPassword] = useState("");
   const [confirmPassword, setConfirmPassword] = useState("");
 
+
   return (
     <div className="signUp">
       <div className="form-container">
