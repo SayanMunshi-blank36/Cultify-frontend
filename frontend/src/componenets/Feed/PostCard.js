@@ -7,7 +7,7 @@ const { Title, Link } = Typography;
 
 function PostCard() {
 
-  const [isLiked, setIsLiked]  = useState(false); 
+//   const [isLiked, setIsLiked]  = useState(false); 
   
   return (
     <div className={styles.postCard}>
