@@ -48,7 +48,9 @@
 .form input {
   background-color: #000;
   border: 0.5px solid #fff;
-  padding: 10px 7.5px;
+  color: #fff;
+  padding: 8px 7.5px;
+  font-size: 0.9rem;
   font-family: "Poppins";
   outline: none;
   width: 100%;
