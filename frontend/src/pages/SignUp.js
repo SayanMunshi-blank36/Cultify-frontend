@@ -2,6 +2,7 @@ import { useState } from "react";
 import "./SignUp.css";
 import { Link, useNavigate } from "react-router-dom";
 import logo from "../img/logo.jpg";
+import axios from 'axios';
 
 function SignUp() {
   const navigate = useNavigate();
@@ -11,6 +12,17 @@ function SignUp() {
   const [userName, setUserName] = useState("");
   const [password, setPassword] = useState("");
   const [confirmPassword, setConfirmPassword] = useState("");
+
+  function postData() {
+    axios.post('https://cultify-backend-production.up.railway.app/api/user', {
+
+      email: email,
+      name: userName,
+      password: password,
+      joinedCults: ["64174ec4e9e4bf8fff3ce037", "641754e3e9e4bf8fff3ce06a"]
+
+    })
+  }
 
 
   return (
@@ -35,16 +47,6 @@ function SignUp() {
               onChange={(e) => setEmail(e.target.value)}
             />
           </div>
-          {/* <div>
-            <input
-              type="text"
-              name="name"
-              id="name"
-              placeholder="ame"
-              value={name}
-              onChange={(e) => setName(e.target.value)}
-            />
-          </div> */}
           <div>
             <label>Username</label>
             <input
@@ -80,7 +82,7 @@ function SignUp() {
               placeholder="Confirm Password"
               value={confirmPassword}
               onChange={(e) => {
-                setPassword(e.target.value);
+                setConfirmPassword(e.target.value);
               }}
             />
           </div>
@@ -96,7 +98,10 @@ function SignUp() {
             By signing up, you agree to our Terms, privacy policy and cookies
             policy.
           </p>
-          <input type="submit" id="submit-btn" value="Sign Up" />
+          <button type="submit" id="submit-btn" onClick={postData}>
+            Sign Up
+          </button>
+          {/* <button type="submit" id="submit-btn" value="Sign Up" onClick={postData()} /> */}
         </div>
 
         <div className="form2">
