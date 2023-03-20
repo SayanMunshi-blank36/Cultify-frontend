@@ -2,15 +2,34 @@ import { useState } from "react";
 import "./SignUp.css";
 import { Link, useNavigate } from "react-router-dom";
 import logo from "../img/logo.jpg";
+import axios from 'axios';
 
 function SignIn() {
   const navigate = useNavigate();
 
-  const [name, setName] = useState("");
   const [email, setEmail] = useState("");
-  const [userName, setUserName] = useState("");
   const [password, setPassword] = useState("");
-  const [confirmPassword, setConfirmPassword] = useState("");
+  function postData() {
+    axios.post('https://cultify-backend-production.up.railway.app/api/user/login', {
+
+      email: email,
+      password: password
+
+    })
+      .then(data => {
+        if (data.error) {
+          console.log(data.error);
+        } else {
+          console.log("Signed in Successfully");
+          console.log(data)
+          localStorage.setItem("jwt", data.data.token)
+          localStorage.setItem("user", JSON.stringify(data.data.user.name))
+          navigate("/");
+        }
+        console.log(data)
+      })
+
+  }
 
   return (
     <div className="signUp">
@@ -47,7 +66,7 @@ function SignIn() {
               }}
             />
           </div>
-          <input type="submit" id="submit-btn" value="Login" />
+          <input type="submit" id="submit-btn" value="Login" onClick={postData} />
         </div>
 
         <div className="form2">
